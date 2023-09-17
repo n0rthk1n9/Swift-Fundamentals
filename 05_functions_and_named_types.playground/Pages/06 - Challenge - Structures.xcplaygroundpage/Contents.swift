@@ -35,7 +35,7 @@ struct Classroom {
  */
 var jan = Student(firstName: "Jan", lastName: "Armbrust", grade: 78)
 var flecki = Student(firstName: "Fleckibert", lastName: "Fleckbert", grade: 85)
-var ossi = Student(firstName: "Osiibert", lastName: "Ossbert", grade: 80)
+var ossi = Student(firstName: "Ossibert", lastName: "Ossbert", grade: 80)
 
 let meowClass = Classroom(subject: "Meowing", students: [jan, flecki, ossi])
 
