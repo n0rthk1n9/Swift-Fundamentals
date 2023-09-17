@@ -62,5 +62,5 @@ let removedPet = animalPets.remove("🐶 Mango")
  Print the new `mythicalPets` set to the console to check your work.
 
  */
-mythicalPets.union(animalPets)
+mythicalPets.formUnion(animalPets)
 print(mythicalPets)
