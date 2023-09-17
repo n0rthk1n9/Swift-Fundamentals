@@ -15,7 +15,10 @@
  As part of the initialization, assign each of those keys a value that corresponds to your own personal information.
  
  */
-
+var personalInformation = ["name": "Jan",
+                           "profession": "📱 iOS Engineer",
+                           "country": "🇩🇪 Germany",
+                           "city": "⚓️ Hamburg"]
 
 /*:
  
@@ -28,8 +31,10 @@
  - Add a `state` key to the dictionary and assign it the value `Ohio`
  
  */
-
-
+personalInformation.updateValue("USA", forKey: "country")
+personalInformation.updateValue("Cleveland", forKey: "city")
+personalInformation["state"] = "Ohio"
+print("Moved to Cleveland, Ohio, USA: \(personalInformation)")
 /*:
  
  ## Challenge 3
@@ -40,9 +45,10 @@
  - Remove the `state` key-value pair with a different strategy.
  
  */
-
-
-
+personalInformation.removeValue(forKey: "city")
+print("Removed city: \(personalInformation)")
+personalInformation["state"] = nil
+print("Removed state: \(personalInformation)")
 /*:
  
  ## Challenge 4
@@ -50,9 +56,8 @@
  Iterate over the remaining keys and values in the dictionary and print them out.
  
  */
-
-
-
-
+for (pieceOfInformation, value) in personalInformation {
+    print("\(pieceOfInformation): \(value)")
+}
 
 //: [⇒ Next: 05 - Working with Sets](@next)
