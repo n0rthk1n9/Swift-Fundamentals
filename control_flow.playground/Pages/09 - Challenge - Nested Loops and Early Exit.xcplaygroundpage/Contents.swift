@@ -13,8 +13,6 @@
     **********
     **********
  
-
- 
  Your first (outer) loop should go from one to 5 inclusive.
  
  Your second (inner) loop should go from one to 10 inclusive.
@@ -25,10 +23,15 @@
  
  You will also need a print statement after the inner loop finishes, to print a newline so that the next row of asterisks prints on a new line. You can do this with simply `print()`.
 
-
  */
-
-
+let rectangleHeight = 5
+let rectangleWidth = 10
+for _ in 1...rectangleHeight {
+    for _ in 1...rectangleWidth {
+        print("*", terminator: "")
+    }
+    print()
+}
 
 /*:
  
@@ -48,7 +51,19 @@
 
 var pastries: [String] = ["cookie", "danish", "cupcake", "donut", "pie", "brownie", "fritter", "cruller"]
 
+for pastry in pastries {
+    if pastry.count > 5 {
+        continue
+    }
+    print("Pastry with 5 letters: \(pastry)")
+}
 
+print("----")
+
+// shorter
+for pastry in pastries where pastry.count <= 5 {
+    print("Pastry with 5 letters: \(pastry)")
+}
 
 /*:
  
@@ -62,4 +77,12 @@ var pastries: [String] = ["cookie", "danish", "cupcake", "donut", "pie", "browni
 
 let daysOfTheWeek: [String] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-
+for dayOfTheWeek in daysOfTheWeek {
+    if dayOfTheWeek == "Sunday" {
+        continue
+    }
+    print(dayOfTheWeek)
+    if dayOfTheWeek == "Friday" {
+        break
+    }
+}
